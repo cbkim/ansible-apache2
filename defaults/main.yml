@@ -3,6 +3,8 @@
 
 apache2_php_version: 7.3
 
+apache2_php_path: '/etc/php'
+
 # Defines if Apache2 should be configured
 apache2_config: false
 
