@@ -13,6 +13,9 @@
     apache2_web_group: www-data
     apache2_web_owner: www-data
     apache2_web_root: /var/www/html
+    apache2_php_version: 7.3
+    apache2_php_path: etc/php/7.3
+
   when: ansible_os_family == "Debian"
 
 - name: setting RedHat facts
