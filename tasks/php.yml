@@ -45,6 +45,11 @@
         (apache2_install_php_sqlite is defined and
         apache2_install_php_sqlite)
 
+- name: create directory with parent directories
+  file:
+    path: "{{ '/' + apache2_php_path + '/apache2'}}"
+    state: directory
+    
 - name: php | Configuring PHP{{ apache2_php_version }}
   template:
     src: "{{ apache2_php_path + '/apache2/php.ini.j2' }}"
